@@ -1,0 +1,13 @@
+  name_curso
+  
+
+
+  name_instituição
+  telephone_instituicao
+  email_instituicao
+
+ valor_curso_propaganda
+ sobre_curso_propaganda
+ dateInicial_curso_propaganda
+ dateFinal_curso_propaganda
+ img_curso_propaganda

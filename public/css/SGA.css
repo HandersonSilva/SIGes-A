@@ -1,0 +1,483 @@
+
+/*slider
+.slider{
+  height: 200%;
+}*/
+.navbar-fixed {
+  position: relative;
+  height: 56px;
+  z-index: 1000;
+}
+
+  /* Banner */
+
+.head-banner{
+	background-image:url("sou_aluno2.png");
+  background-size:  cover;
+
+}
+.margin-top_small{
+  margin-top: 20%;
+}
+
+.imgCursos a{
+  margin-top: 9%;
+  margin-left: 10%;
+
+}
+.card-title{
+  margin-top: 0%;
+}
+
+.subtexto{
+  color:#00CD66;
+}
+.pragandaTexto{
+
+  text-align: center;
+}
+.colorBotãoInfoHome{
+  background-color: #ffff;
+}
+.posicaoImg{
+  margin-left: 5%;
+  margin-right: 5%;
+
+
+}
+
+h3{
+  color: black;
+}
+#maisCurso {
+
+  padding-left: 55%;
+  font-size: 15pt;
+}
+
+#maisCurso a#btn_mobile{
+    border-radius: 25px;
+}
+
+
+#maisCurso a{
+  color: #4db6ac;
+}
+
+div.row h4#nome_inst{
+
+    font-size: 25px;
+    margin: 10px;
+}
+
+
+.banner{
+	height:calc(100vh) !important;
+}
+
+ div.div_fundo_slide{
+  margin-bottom: 0px;
+}
+
+footer{
+  padding: 0;
+}
+
+/*botão anterior slick*/
+.slick-prev {
+  left: 0;
+  z-index: 999;
+}
+
+.slick-prev{
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 30px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: #008080;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+/*botão proximo slick*/
+.slick-next{
+  right:0;
+  z-index: 999;
+}
+.slick-next{
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 30px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background:transparent;
+}
+/*pagination slick*/
+.slick-dots li button::before {
+  font-family: '';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: none;
+  text-align: center;
+  opacity: .25;
+  color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*item do slick*/
+.item{
+  margin-top: 8%;
+
+}
+
+
+#card_carousel{
+  margin-left: auto;
+  margin-right:auto;
+  margin-bottom: 20px;
+  height: 350px;
+  width:90%;
+  border-radius: 10px;
+
+
+}
+
+#card-image-cursos img{
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   width: 100%;
+}
+
+
+#mySlide{
+
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 10px;
+}
+
+/* cards aluno/empresa*/
+#cardAlunoEmpresa{
+  width: 80%;
+  height: 80%;
+}
+
+#cardAluno{
+
+  margin-bottom: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2%;
+  width: 70%;
+
+}
+#cardEmpresa{
+ margin-bottom: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2%;
+  width: 70%;
+
+}
+
+.card .card-image img.img_alun_emp{
+   width: 100%;
+   margin: auto;
+}
+
+.card .card-content .content_alu_emp{
+    padding-bottom: 35px;
+
+}
+/*fim cards aluno/empres*/
+#logoHome{
+
+  margin-top: 10%;
+}
+#h5logo{
+
+}
+
+/* config cards cursos*/
+
+#card {
+    width: 70%;
+    height: 80%;
+}
+
+
+ .card-image {
+   margin-top: 0px;
+
+}
+
+/*config slide cursos*/
+.titulo-secao {
+    display: flex;
+    align-items: center;
+   /* justify-content: space-between;*/
+    font-family: 'Montserrat', verdana, sans-serif;
+    /*font-size: 30px;
+    color: #8795A2;
+    font-weight: 400;*/
+    border-bottom: 1px solid #ECEDED;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+
+}
+.titulo-secao a {
+    color: seashell;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 2%;
+    text-transform: none;
+}
+
+
+.titulo-secao span{
+  font-size: 40px;
+  margin-left: 4%;
+  color: seashell;
+  text-align: center;
+}
+
+#titulo_secao_slide{
+  border-bottom: 1px solid  #616161;
+  border-radius: 10px;
+  border-bottom-width:4px;
+  box-shadow: 10px;
+}
+
+/*cor do erro nos campos*/
+.error{
+  color:red;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+
+
+}
+#strong-titulo {
+    font-size: 30px;
+    /*border-bottom: 1px solid #8795A2;*/
+    color:#ffffff;
+
+}
+
+h5 b{
+  margin-left: 3%;
+}
+
+/* nav todos os cursos*/
+
+.breadcrumb {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    margin-left: 10px;
+}
+
+/*tela sobre*/
+#card_sobre{
+  margin: auto;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 500px;
+}
+
+#card_sobre img{
+  width: 100%;
+}
+
+#link_contato{
+  color: aquamarine;
+
+}
+.icon_sobre{
+  color:#81c784;
+}
+
+/*tela contato*/
+
+#panel_contato{
+  margin-top: 30px;
+}
+
+#card_content_nome{
+  padding: 10px;;
+}
+
+label#nome_contato-error.error{
+  color:#ef092f;
+}
+label#tel_contato-error.error{
+  color:#ef092f;
+}
+label#email_contato-error.error{
+  color:#ef092f;
+}
+label#textAreaContato-error.error{
+  color:#ef092f;
+}
+
+label.error{
+  color:#ef092f;
+}
+/*tela mensagem de email enviado*/
+#card_email_msg{
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  background-color: #ffffff;
+  box-shadow: none;
+  border: 2px solid #b2dfdb;
+  border-radius: 10px;
+}
+#text_success_email{
+  font-family: 'Didact Gothic', sans-serif;
+  color:#00796b;
+  
+}
+
+
+/*
+#animate-area{
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+
+  animation:animatedBackground 100s linear infinite;
+}
+
+@keyframes animatedBackground{
+  from { background-position: 0 0; }
+  to { background-position: 400% 0%; }
+}*/
+
+
+/*media queries*/
+@media(max-width: 1280px){
+  #maisCurso {
+    padding-left: 55%;
+    text-align: center;
+    font-size: 12pt;
+
+  }
+}
+
+@media(max-width: 900px){
+    #card_carousel{
+    margin-left: 2%;
+    margin-right: 0%;
+    height: 100%;
+    width: 95%;
+  }
+
+   #cardAluno{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 100%;
+
+  }
+
+  #cardEmpresa{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 100%;
+
+  }
+
+  #maisCurso {
+    padding-right: auto;
+    padding-left: 35%;
+    text-align: center;
+    font-size: 12pt;
+
+  }
+
+
+}
+
+  @media (max-width: 600px)
+{
+
+
+  #cardAluno{
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  #cardEmpresa{
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  #card_carousel {
+    margin-left: 1%;
+    margin-right: 0%;
+    height: 100%;
+    width: 98%;
+}
+
+#maisCurso {
+  padding-left: 20%;
+  font-size: 12pt;
+}
+
+#strong-titulo{
+  margin: auto;
+  width: 100%;
+  }
+
+  img.img_slide{
+    width: 300px;
+  }
+  #card_sobre{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+  }
+  #card_sobre img{
+    margin: 0px;
+
+  }
+}
