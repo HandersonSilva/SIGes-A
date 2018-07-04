@@ -187,7 +187,7 @@ public function enviaMsg(Request $request ){
                 $telefone = $request->tel_contatoN;
                 
                 $assunto = "Contato SIGes-A";
-                $emailDe = "Email de envio";//Email da empresa o qual vai retornar o contato automatico para o cliente
+                $emailDe = "contato@sigesa.com";//Email da empresa o qual vai retornar o contato automatico para o cliente
                 $emailPara = isset($_POST['email_contatoN'])?$_POST['email_contatoN']:" ";
                
                 
@@ -279,12 +279,15 @@ public function enviaMsg(Request $request ){
                 $email->setHtml($html);
                 $email->addTo($to);
                 //$email->setText($text);
-            
+               // echo $_ENV['SENDGRID_USER'];
                // print_r($email);
                 // Your SendGrid account credentials
-              
-                $username = 'seu nome';
-                $password = 'sua senha';
+                $username = getenv('SENDGRID_USER');
+                $password  =getenv('SENDGRID_PASSWORD');
+                
+                //$username = var_dump(getenv('SENDGRID_USER'));
+                //$password = var_dump(getenv('SENDGRID_PASSWORD'));
+
             
                 // Create SendGrid object
                 $sendgrid = new \SendGrid($username, $password);
@@ -343,7 +346,7 @@ public function enviaMsg(Request $request ){
                 $telefone = $request->tel_contatoN;
                 
                 $assunto = "Contato SIGes-A";
-                $emailDe = "email de envio";//Email da empresa o qual vai retornar o contato automatico para o cliente
+                $emailDe = "contato@sigesa.com";//Email da empresa o qual vai retornar o contato automatico para o cliente
                 $msgUsuario = isset($_POST['textAreaContatoN'])?$_POST['textAreaContatoN']:" ";
                 $emailUser = isset($_POST['email_contatoN'])?$_POST['email_contatoN']:" ";
                
@@ -353,7 +356,7 @@ public function enviaMsg(Request $request ){
                 $email = new Email();
                 // The list of addresses this message will be sent to
                 // [This list is used for sending multiple emails using just ONE request to SendGrid]
-               $toList = array('Email para quem vai receber','email para quem vai receber');//lista de usuario para enviar email
+               $toList = array('handersonsylva@gmail.com','jhsbgs@gmail.com');//lista de usuario para enviar email
             
                 // Specify the names of the recipients
                 $nameList = array($nome,$nome);
@@ -441,8 +444,10 @@ public function enviaMsg(Request $request ){
                // print_r($email);
                 // Your SendGrid account credentials
                 
-                $username = 'seu nome';
-                $password = 'sua senha';
+                $username = getenv('SENDGRID_USER');
+                $password  =getenv('SENDGRID_PASSWORD');
+               // $username = var_dump(getenv('SENDGRID_USER'));
+               //$password = var_dump(getenv('SENDGRID_PASSWORD'));
                 //outra forma de envio https://github.com/sendgrid/sendgrid-php
 
                
