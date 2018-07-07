@@ -142,13 +142,14 @@ public function enviaMsg(Request $request ){
 
      $sendGrid = new Enviar_email();
        //envio para o SIGA
-     $sendGrid->enviarEmailUser($request);
-  
+     $emailEnviado = $sendGrid->enviarEmailUser($request);
+    
+    
 
 
 
     //envio para o usuario
-    $sendGrid->envioEmailAdm($request);
+
     //router layout de confirmação de envio
     return redirect()->route('home.contato.emailsuccess');
 
@@ -165,6 +166,8 @@ public function enviaMsg(Request $request ){
     }
 
     public function emailSuccess(){
+       //salvar dados do usuario aqui.
       return view('layouts.home.confirmacao_email');
     }
 }
+

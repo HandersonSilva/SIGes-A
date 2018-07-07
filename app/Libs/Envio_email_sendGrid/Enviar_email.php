@@ -3,16 +3,24 @@
 namespace App\Libs\Envio_email_sendGrid;
 use SendGrid\Email;
 use app\Libs\sendgrid\sendgrid\lib\SendGrid;
+use \Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use Exception;
+use App\Http\Requests\HomeContatoRequest;
+use Illuminate\Support\Facades\View;
+
+
  class Enviar_email
 {
-    public function enviarEmailUser($request){
+
+    public function  enviarEmailUser($request){
         //Função que vai enviar um email para o usuario quando ele entrar em contato
  
 
              /* This example is used for sendgrid-php V2.1.1 (https://github.com/sendgrid/sendgrid-php/tree/v2.1.1)
                         https://docs.microsoft.com/pt-br/azure/store-sendgrid-php-how-to-send-email
                 */
-                 
+               
                 //get dados
                 $nome = $request->nome_contatoN;
                 $telefone = $request->tel_contatoN;
@@ -127,20 +135,21 @@ use app\Libs\sendgrid\sendgrid\lib\SendGrid;
                 $response = $sendgrid->send($email);
                 //print_r($response);
                 $status = $response->message; // [message] => success
-                
+              
                 if($status == 'success'){
-                    //faça algo;
-                    //echo($status);
+                    //enviar amail para os admin do projeto
+                    $this->envioEmailAdm($request);
+                   
                 }else{
-                   // faça algo;
-                   //echo($status);
+                    
+                   
                 }
-               
      
-
+                
     }
 
     public function envioEmailAdm($request){
+        
  //envio para os adm do SIGA_RN
        /* Mail::send('layouts.tests.email_siga',$request->all(), function($msg){
             $msg->subject('Novo contato');
@@ -186,7 +195,7 @@ use app\Libs\sendgrid\sendgrid\lib\SendGrid;
                 $email = new Email();
                 // The list of addresses this message will be sent to
                 // [This list is used for sending multiple emails using just ONE request to SendGrid]
-               $toList = array('handersonsylva@gmail.com','frandosax@gmail.com');//lista de usuario para enviar email
+               $toList = array('handersonsylva@gmail.com','jhsbgs@gmail.com');//lista de usuario para enviar email
             
                 // Specify the names of the recipients
                 $nameList = array($nome,$nome);
@@ -292,7 +301,8 @@ use app\Libs\sendgrid\sendgrid\lib\SendGrid;
                 
                 if($status == 'success'){
                     //faça algo;
-                   // echo($status);
+                    //router layout de confirmação de envio
+                    $this->emailSuccess();
                 }else{
                    // faça algo;
                    //echo($status);
@@ -301,4 +311,10 @@ use app\Libs\sendgrid\sendgrid\lib\SendGrid;
      
 
     }
+    public function emailSuccess(){
+        //salvar dados do usuario aqui.
+       //return view('layouts.home.confirmacao_email');
+     //  return redirect()->action('HomeController@index');
+     }
+   
 }
