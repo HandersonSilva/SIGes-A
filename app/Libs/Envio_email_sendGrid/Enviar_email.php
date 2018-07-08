@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Exception;
 use App\Http\Requests\HomeContatoRequest;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Redirect;
+use App\Events\SomeEvent;
 
 
  class Enviar_email extends Controller
@@ -269,7 +271,29 @@ use Illuminate\Support\Facades\View;
             return $e->getMessage();
         }
             
+<<<<<<< HEAD
 
+=======
+                // Create SendGrid object
+                $sendgrid = new \SendGrid($username, $password);
+            
+                // send message
+                $response = $sendgrid->send($email);
+                //print_r($response);
+                $status = $response->message; // [message] => success
+              
+                if($status == 'success'){
+                    //enviar amail para os admin do projeto
+                    $this->envioEmailAdm($request);
+                    return redirect()->action('HomeController@emailSuccess');
+                   
+                }else{
+                    
+                   
+                }
+     
+                
+>>>>>>> upstream/master
     }
 
     public function envioEmailAdm($request){
@@ -536,6 +560,7 @@ use Illuminate\Support\Facades\View;
                //$password = var_dump(getenv('SENDGRID_PASSWORD'));
                 //outra forma de envio https://github.com/sendgrid/sendgrid-php
 
+<<<<<<< HEAD
         try{
             // Create SendGrid object
             $sendgrid = new \SendGrid($username,$password);
@@ -565,6 +590,34 @@ use Illuminate\Support\Facades\View;
             return $e->getMessage();
         }
 
+=======
+               
+            
+                // Create SendGrid object
+                $sendgrid = new \SendGrid($username,$password);
+            
+                // send message
+                $response = $sendgrid->send($email);
+                //print_r($response);
+                $status = $response->message; // [message] => success
+                
+                if($status == 'success'){
+                    //faça algo;
+                    //router layout de confirmação de envio
+                    //return redirect()->route('home.contato.emailsuccess');
+                    //$this->emailSuccess();
+                     //chamada do event
+                     
+                    event(new SomeEvent());
+                }else{
+                   // faça algo;
+                   //echo($status);
+                   //return redirect()->action('HomeController@emailSuccess');
+                   //event(new SomeEvent());
+                }
+               
+     
+>>>>>>> upstream/master
 
     }
     public function emailSuccess(){

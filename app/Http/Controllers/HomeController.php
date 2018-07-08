@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Exception;
 use App\Http\Requests\HomeContatoRequest;
 use App\Libs\Envio_email_sendGrid\Enviar_email;
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Support\Facades\Event;
+use App\Events\SomeEvent;
 
 
 
@@ -20,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+       
+       
        //Busca das instituições cadastradas
         $instituicao = DB::table('instituicaos')
         ->select('id', 'SGA_instituicao_nomeFantasia')
@@ -136,7 +141,6 @@ public function enviaMsg(Request $request ){
     $nome = $request->nome_contatoN;
     $telefone = $request->tel_contatoN;
     $email = $request->email_contatoN;*/
-
     //Salvar dados do contato em uma tabela
     //A fazer-------------------------
 
@@ -147,8 +151,12 @@ public function enviaMsg(Request $request ){
 
     //envio para o usuario
 
+<<<<<<< HEAD
     //router layout de confirmação de envio
     //return redirect()->route('home.contato.emailsuccess');
+=======
+ 
+>>>>>>> upstream/master
 
 }
 
