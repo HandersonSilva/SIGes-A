@@ -1,20 +1,18 @@
 <?php
 
-namespace App\Libs\Envio_email_sendGrid;
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Events\SomeEvent;
 use SendGrid\Email;
 use \Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 use Exception;
-use App\Http\Requests\HomeContatoRequest;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\Redirect;
-use App\Events\SomeEvent;
 
-
- class Enviar_email
+class EmailController extends Controller
 {
 
-    public function  enviarEmailUser($request){
+    public function  enviarEmailUser( Request $request){
+       
         //Função que vai enviar um email para o usuario quando ele entrar em contato
  
 
@@ -136,22 +134,43 @@ use App\Events\SomeEvent;
                 $response = $sendgrid->send($email);
                 //print_r($response);
                 $status = $response->message; // [message] => success
-              
+                $cont = 0;
+                //verificar 
+              while(true){
                 if($status == 'success'){
+                   // echo "Entrou no success";
                     //enviar amail para os admin do projeto
-                    $this->envioEmailAdm($request);
-                    return redirect()->action('HomeController@emailSuccess');
-                   
-                }else{
-                    
+                  // $this->envioEmailAdm($request);
+                   event(new SomeEvent());   
+                   return redirect()->route('home.contato.emailsuccess');
+                            
+                   break;
+                }
+                if($status == 'error'){
+                    //echo "Entrou no error <br/> ";
+                    //echo $status;
+                    //echo $cont;
+                   // $this->envioEmailAdm($request);
+                   event(new SomeEvent());  
+                    //router layout de confirmação de envio
+                  // return redirect()->route('home.contato.emailsuccess');
+                  
+                 
+                   break;
+                
                    
                 }
+                
+                $cont++;
+              }
+               
      
                 
     }
+    
 
     public function envioEmailAdm($request){
-        
+       
  //envio para os adm do SIGA_RN
        /* Mail::send('layouts.tests.email_siga',$request->all(), function($msg){
             $msg->subject('Novo contato');
@@ -301,28 +320,125 @@ use App\Events\SomeEvent;
                 //print_r($response);
                 $status = $response->message; // [message] => success
                 
+                  //verificar 
+              while(true){
                 if($status == 'success'){
-                    //faça algo;
-                    //router layout de confirmação de envio
-                    //return redirect()->route('home.contato.emailsuccess');
-                    //$this->emailSuccess();
-                     //chamada do event
-                     
-                    event(new SomeEvent());
-                }else{
-                   // faça algo;
-                   //echo($status);
-                   //return redirect()->action('HomeController@emailSuccess');
-                   //event(new SomeEvent());
+                   // echo "Entrou no success";
+                    //enviar amail para os admin do projeto
+                   // $this->envioEmailAdm($request);
+                 
+                   
+                   return redirect()->route('home.contato.emailsuccess');
+                   break;
                 }
+                if($status == 'error'){
+                    //echo "Entrou no error <br/> ";
+                    //echo $status;
+                    //echo $cont;
+                 
+                      //router layout de confirmação de envio
+                    return redirect()->route('home.contato.emailsuccess');
+                 
+                   break;
                
+                   
+                }
+                
+                $cont++;
+              }
+              
      
 
     }
     public function emailSuccess(){
         //salvar dados do usuario aqui.
-       //return view('layouts.home.confirmacao_email');
-     //  return redirect()->action('HomeController@index');
+        //echo "Sucesso";
+      return view('layouts.home.confirmacao_email');
+     // return redirect()->action('HomeController@index');
      }
-   
+
+     public function emailFalha(){
+        //salvar dados do usuario aqui.
+        echo "O envio falhou";
+      // return view('layouts.home.confirmacao_email');
+     // return redirect()->action('HomeController@index');
+     }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }
