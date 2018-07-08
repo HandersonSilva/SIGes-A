@@ -35,7 +35,7 @@
                             <tr>
                               <td valign="top" align="center" class="lh-3" style="padding: 30px 60px 21px; margin: 0px; line-height: 1.35; font-size: 16px; font-family: 'Times New Roman', Times, serif;">
                                   <span style="font-family:Verdana,Arial,sans-serif;font-size:20px;font-weight:400;color:#fffefe; line-height:1.3;">
-                                  {!! $nome_contatoN !!} requer sua atenção, retorne o mais rápido possìvel.</span>
+                                  -name- requer sua atenção, retorne o mais rápido possìvel.</span>
                                 </td>
                           </tr>
                       </tbody></table>
