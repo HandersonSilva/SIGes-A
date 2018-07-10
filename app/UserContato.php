@@ -12,6 +12,7 @@ class UserContato extends Model
         'nome_contato',
         'tel_contato',
         'email_contato',
-        'msg_contato'
+        'msg_contato',
+        'status_envio_email_adm'
     );
 }

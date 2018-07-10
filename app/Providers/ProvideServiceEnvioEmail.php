@@ -6,10 +6,10 @@ use App\Events\SomeEventError;
 use App\Listeners\EventListenerError;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use App\Events\SomeEvent;
-use App\Listeners\EventListener;
+use App\Events\EventEmail;
+use App\Listeners\ListenerEnvioEmail;
 
-class EventServiceProvider extends ServiceProvider
+class ProvideServiceEnvioEmail extends ServiceProvider
 {
     /**
      * The event listener mappings for the application.
@@ -17,13 +17,13 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
+        'App\Events\EventEmail' => [
+            'App\Listeners\ListenerEnvioEmail',
         ],
         //evento
-        SomeEvent::class=>[
+        EventEmail::class=>[
             //listener
-            EventListener::class,
+            ListenerEnvioEmail::class,
 
         ],
         SomeEventError::class=>[

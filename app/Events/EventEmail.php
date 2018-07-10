@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use http\Env\Request;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -9,7 +10,7 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class SomeEventError
+class EventEmail
 {
     use InteractsWithSockets, SerializesModels;
 
@@ -18,9 +19,12 @@ class SomeEventError
      *
      * @return void
      */
-    public function __construct()
+    public $request;
+    
+    public function __construct( $request)
     {
         //
+        $this->request = $request;
     }
 
     /**

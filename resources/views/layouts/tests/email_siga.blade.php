@@ -57,7 +57,7 @@
                             <tr>
                               <td valign="top" align="left" class="lh-4" style="padding: 24px 60px 16px; margin: 0px; line-height: 1.45; font-size: 16px; font-family: 'Times New Roman', Times, serif;">
                                   <div style="font-family: Arial,sans-serif;font-size:16px;font-weight:400;color:#ffffff; line-height:1.4;">
-                                      <h3> Dados do contato</h3>
+                                      <h3>Dados do contato</h3>
                                       <p>Nome: {!! $nome_contatoN !!}</p>
                                       <p>Telefone: {!! $tel_contatoN !!}</p>
                                       <p>Email: {!! $email_contatoN !!}</p>

@@ -10,7 +10,7 @@ use Exception;
 use App\Http\Requests\HomeContatoRequest;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Redirect;
-use App\Events\SomeEvent;
+use App\Events\EventEmail;
 
 
  class Enviar_email extends Controller
@@ -608,12 +608,12 @@ use App\Events\SomeEvent;
                     //$this->emailSuccess();
                      //chamada do event
                      
-                    event(new SomeEvent());
+                    event(new EventEmail());
                 }else{
                    // faça algo;
                    //echo($status);
                    //return redirect()->action('HomeController@emailSuccess');
-                   //event(new SomeEvent());
+                   //event(new EventEmail());
                 }
                
      

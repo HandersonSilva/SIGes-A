@@ -7,10 +7,10 @@
       <div class="row">
         <div class="card-panel " id="card_email_msg">
           <div class="row">
-            <div class="col m8 l8 offset-l4">
+            <div class="col s12 m12 l12 center">
                 <img src="{{asset('img/logo/icon_success.png')}}" alt="" class="responsive-img responsive-email">
             </div>
-            <div class="col m10 l10 offset-l1">
+            <div class="col s12 m12 l12 center">
                 <h2 id="text_success_email" class="center-align">Seu email foi enviado com sucesso, e em breve entraremos em contato!</h2>
             </div>
           </div>

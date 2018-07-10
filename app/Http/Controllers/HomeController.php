@@ -9,7 +9,7 @@ use App\Http\Requests\HomeContatoRequest;
 use App\Libs\Envio_email_sendGrid\Enviar_email;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\Facades\Event;
-use App\Events\SomeEvent;
+use App\Events\EventEmail;
 
 
 
