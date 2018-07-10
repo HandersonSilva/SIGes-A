@@ -248,6 +248,7 @@ class EmailController extends Controller
               while(true){
                 if($status == 'success'){
 <<<<<<< HEAD
+<<<<<<< HEAD
                    // echo "Entrou no success";
                     //enviar amail para os admin do projeto
                   // $this->envioEmailAdm($request);
@@ -255,15 +256,21 @@ class EmailController extends Controller
                    event(new SomeEvent());
 
 =======
+=======
+>>>>>>> upstream/master
                   //Chamar o event que envia o email para os admin
                    event(new SomeEvent($request));   
                    return redirect()->route('home.contato.emailsuccess');
                  
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
 >>>>>>> upstream/master
                             
                    break;
                 }
                 if($status == 'error'){
+<<<<<<< HEAD
 <<<<<<< HEAD
                     //echo "Entrou no error <br/>";
                     //echo $status;
@@ -275,6 +282,8 @@ class EmailController extends Controller
                   // return redirect()->route('home.contato.emailsuccess');
 
 =======
+=======
+>>>>>>> upstream/master
 
                     echo "Entrou no error <br/> ";
                             
@@ -293,6 +302,7 @@ class EmailController extends Controller
     }
     
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function envioEmailAdm($request){
        
@@ -597,6 +607,9 @@ class EmailController extends Controller
      
 
     }
+=======
+    
+>>>>>>> upstream/master
 =======
     
 >>>>>>> upstream/master

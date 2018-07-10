@@ -27,12 +27,15 @@ class EventListener
      */
     public function handle(SomeEvent $event)
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
         //minha logica
         //echo "Salvar dados do usuario via event";
         return redirect()->route('home.contato.emailsuccess');
         //return view('layouts.home.confirmacao_email');
 =======
+=======
+>>>>>>> upstream/master
     {    //pega a variavel request que é passada para o SomeEvent  
          $request = $event->request;
         //envio para os adm do SIGA_RN
@@ -206,6 +209,9 @@ class EventListener
                }
                
 
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
 >>>>>>> upstream/master
     }
 }
