@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Events\SomeEventError;
+use App\Listeners\EventListenerError;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use App\Events\SomeEvent;
@@ -22,6 +24,10 @@ class EventServiceProvider extends ServiceProvider
         SomeEvent::class=>[
             //listener
             EventListener::class,
+
+        ],
+        SomeEventError::class=>[
+            EventListenerError::class,
         ]
     ];
 

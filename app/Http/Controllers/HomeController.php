@@ -144,19 +144,16 @@ public function enviaMsg(Request $request ){
     //Salvar dados do contato em uma tabela
     //A fazer-------------------------
 
-     $sendGrid = new Enviar_email();
+     $sendGrid = new EmailController();
        //envio para o SIGA
      $sendGrid->enviarEmailUser($request);
 
 
     //envio para o usuario
 
-<<<<<<< HEAD
+
     //router layout de confirmação de envio
     //return redirect()->route('home.contato.emailsuccess');
-=======
- 
->>>>>>> upstream/master
 
 }
 

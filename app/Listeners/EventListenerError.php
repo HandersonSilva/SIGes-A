@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Listeners;
-
-use App\Events\SomeEvent;
+use App\Events\SomeEventError;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class EventListener
+class EventListenerError
 {
     /**
      * Create the event listener.
@@ -24,11 +23,10 @@ class EventListener
      * @param  SomeEvent  $event
      * @return void
      */
-    public function handle(SomeEvent $event)
+    public function handle(SomeEventError $event)
     {
         //minha logica
-        //echo "Salvar dados do usuario via event";
-        return redirect()->route('home.contato.emailsuccess');
+        return redirect()->route('home.contato.email_error');
         //return view('layouts.home.confirmacao_email');
     }
 }

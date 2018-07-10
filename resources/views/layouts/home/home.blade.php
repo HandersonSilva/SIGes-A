@@ -8,8 +8,8 @@
           @if(empty($imgs_slide))
         <ul>
           <li>
-            <img src="{{asset('img/curso4.jpg')}}"> <!-- random image -->
-            <div class="caption center-align responsive-img">
+            <img src="{{asset('img/curso4.jpg')}}" class="responsive-img"> <!-- random image -->
+            <div class="caption center">
               <h3></h3>
               <h5 class="subtexto" class="light grey-text text-lighten-3"></h5>
             </div>
@@ -31,16 +31,16 @@
         </ul>
 
           @else
-            <ul class="slides">
-          @foreach($imgs_slide as $slide)
-            <li>
-              <img src="{{asset($slide->imagem)}}" class="responsive-img img_slide" > <!-- random image -->
-              <div class="caption center-align">
-              </div>
-            </li>
+          <ul class="slides">
+            @foreach($imgs_slide as $slide)
+                <li>
+                  <img src="{{asset($slide->imagem)}}" class=" img_slide"> <!-- random image -->
+                  <div class="caption center-align">
+                  </div>
+                </li>
             @endforeach
           </ul>
-          @endif
+        @endif
 
   </div><!--final slide-->
 <br/>
