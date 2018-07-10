@@ -18,9 +18,12 @@ class SomeEvent
      *
      * @return void
      */
-    public function __construct()
+    public $request;
+    
+    public function __construct( $request)
     {
         //
+        $this->request = $request;
     }
 
     /**
