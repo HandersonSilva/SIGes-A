@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m8 l8 offset-l5">
+        <div class="col s12 m12 l12  center">
           <button class="waves-effect waves-light btn center" type="submit"><i class="material-icons left">drafts</i>Enviar</button>
         </div>
       </div>

@@ -27,6 +27,7 @@ Route::get('/empresa/sobre','HomeController@sobre')->name('home.sobre');
 Route::get('/empresa/contato','HomeController@contato')->name('home.contato');
 Route::post('/empresa/contato/enviarmsg','EmailController@enviarEmailUser')->name('home.contato.enviar');
 Route::get('/empresa/contato/email_success','EmailController@emailSuccess')->name('home.contato.emailsuccess');
+Route::get('/empresa/contato/email_error','EmailController@emailFalha')->name('home.contato.email_error');
 
 
 

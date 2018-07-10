@@ -9,7 +9,7 @@ use App\Http\Requests\HomeContatoRequest;
 use App\Libs\Envio_email_sendGrid\Enviar_email;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\Facades\Event;
-use App\Events\SomeEvent;
+use App\Events\EventEmail;
 
 
 
@@ -144,33 +144,23 @@ public function enviaMsg(Request $request ){
     //Salvar dados do contato em uma tabela
     //A fazer-------------------------
 
-     $sendGrid = new Enviar_email();
+     $sendGrid = new EmailController();
        //envio para o SIGA
-     $emailEnviado = $sendGrid->enviarEmailUser($request);
-    
-    
-
+     $sendGrid->enviarEmailUser($request);
 
 
     //envio para o usuario
 
- 
+
+    //router layout de confirmação de envio
+    //return redirect()->route('home.contato.emailsuccess');
 
 }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
 
     }
 
-    public function emailSuccess(){
-       //salvar dados do usuario aqui.
-      return view('layouts.home.confirmacao_email');
-    }
 }
 

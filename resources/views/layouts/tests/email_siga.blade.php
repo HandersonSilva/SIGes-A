@@ -35,7 +35,7 @@
                             <tr>
                               <td valign="top" align="center" class="lh-3" style="padding: 30px 60px 21px; margin: 0px; line-height: 1.35; font-size: 16px; font-family: 'Times New Roman', Times, serif;">
                                   <span style="font-family:Verdana,Arial,sans-serif;font-size:20px;font-weight:400;color:#fffefe; line-height:1.3;">
-                                  {!! $nome_contatoN !!} requer sua atenção, retorne o mais rápido possìvel.</span>
+                                  -name- requer sua atenção, retorne o mais rápido possìvel.</span>
                                 </td>
                           </tr>
                       </tbody></table>
@@ -57,7 +57,7 @@
                             <tr>
                               <td valign="top" align="left" class="lh-4" style="padding: 24px 60px 16px; margin: 0px; line-height: 1.45; font-size: 16px; font-family: 'Times New Roman', Times, serif;">
                                   <div style="font-family: Arial,sans-serif;font-size:16px;font-weight:400;color:#ffffff; line-height:1.4;">
-                                      <h3> Dados do contato</h3>
+                                      <h3>Dados do contato</h3>
                                       <p>Nome: {!! $nome_contatoN !!}</p>
                                       <p>Telefone: {!! $tel_contatoN !!}</p>
                                       <p>Email: {!! $email_contatoN !!}</p>
