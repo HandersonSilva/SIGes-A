@@ -20,11 +20,11 @@
 
                       </ul>
                       <ul class="side-nav" id="mobile-demo">
-                          <li><a href="#" >Home</a></li>
-                          <li><a href="#" >Aluno</a></li>
+                          <li><a href="{{ route('home') }}" >Home</a></li>
+                          <li><a href="#">Aluno</a></li>
                           <li><a href="#" >Empresa</a></li>
-                          <li><a href="#" >Sobre</a></li>
-                          <li><a href="#" >Suporte</a></li>
+                          <li><a href="{{ route('home.sobre') }}" >Sobre</a></li>
+                          <li><a href="{{ route('home.contato') }}" >Contato</a></li>
                            <li><a href="{{  route('teste') }}" >Teste cadastro curso</a></li>
                       </ul>
                   </div><!-- fim container-->

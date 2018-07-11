@@ -266,10 +266,9 @@ class ListenerEnvioEmail
                 // print_r($email);
                  // Your SendGrid account credentials
                  
-                 $username = "handerso5898777";
-                 $password  ="268tuiref";
-                 // $username = var_dump(getenv('SENDGRID_USER'));
-                //$password = var_dump(getenv('SENDGRID_PASSWORD'));
+                 $username = getenv('SENDGRID_USER');
+                 $password  =getenv('SENDGRID_PASSWORD');
+            
                  //outra forma de envio https://github.com/sendgrid/sendgrid-php
 
              

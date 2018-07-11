@@ -19,6 +19,7 @@ class CreateUserContatosTable extends Migration
             $table->string('tel_contato');
             $table->string('email_contato');
             $table->string('msg_contato');
+            $table->string('status_envio_email_adm');
             $table->timestamps();
         });
     }
